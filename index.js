@@ -10,9 +10,10 @@ app.use(cors());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.json());
 
-//database setup
-mongoose.connect("mongodb://localhost:27017/yiqing_db");
 
+
+//database setup
+mongoose.connect("mongodb+srv://react:ZlMJCe6Dv89cRkfl@covid19-ithaca.vvofb.mongodb.net/covid19_ithaca");
 
 app.get("/dailydata", (req, res) => {
     // Daily.find({}, (err, data) => {
