@@ -15,6 +15,10 @@ app.use(express.json());
 //database setup
 mongoose.connect("mongodb+srv://react:ZlMJCe6Dv89cRkfl@covid19-ithaca.vvofb.mongodb.net/covid19_ithaca");
 
+app.get("/", (req, res) => {
+    res.send("Hello Covid19")
+});
+
 app.get("/dailydata", (req, res) => {
     // Daily.find({}, (err, data) => {
     //     if(err) {
